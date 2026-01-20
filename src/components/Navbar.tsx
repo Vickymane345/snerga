@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useState } from "react";
-import { Home, Briefcase, BookOpen, Mail } from "lucide-react";
+import { Home, Briefcase, BookOpen, Mail, Info } from "lucide-react";
 
 export function Navbar() {
   // Mock user state - always null for landing page to show Login/Signup
@@ -104,6 +104,7 @@ export function Navbar() {
       </nav>
 
       {/* MOBILE TAB BAR (NEW, MOBILE ONLY) */}
+      {/* MOBILE TAB BAR (MOBILE ONLY) */}
       <div className="fixed bottom-0 left-0 right-0 z-50 md:hidden bg-[#0a1628]/95 backdrop-blur-md border-t border-[#1e3a5f]">
         <div className="flex justify-around items-center py-3">
           <Link
@@ -120,6 +121,14 @@ export function Navbar() {
           >
             <Briefcase size={18} />
             <span>Services</span>
+          </Link>
+
+          <Link
+            href="/about"
+            className="flex flex-col items-center text-[#94a3b8] hover:text-white transition-colors text-xs"
+          >
+            <Info size={18} />
+            <span>About</span>
           </Link>
 
           <Link
